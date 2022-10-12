@@ -1,0 +1,31 @@
+{
+    "kind": "collectionType",
+    "collectionName": "cards",
+    "info": {
+        "singularName": "card",
+        "pluralName": "cards",
+        "displayName": "Card"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "users_ifinance": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::users-ifinance.users-ifinance",
+            "inversedBy": "cards"
+        },
+        "transaction": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::transaction.transaction",
+            "inversedBy": "cards"
+        }
+    }
+}
