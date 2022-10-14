@@ -4,7 +4,8 @@
   "info": {
     "singularName": "card",
     "pluralName": "cards",
-    "displayName": "Card"
+    "displayName": "Card",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -21,11 +22,11 @@
       "target": "api::users-ifinance.users-ifinance",
       "inversedBy": "cards"
     },
-    "transaction": {
+    "transactions": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::transaction.transaction",
-      "inversedBy": "cards"
+      "mappedBy": "card"
     }
   }
 }

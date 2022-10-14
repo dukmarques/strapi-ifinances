@@ -48,11 +48,11 @@
             "target": "api::users-ifinance.users-ifinance",
             "inversedBy": "transactions"
         },
-        "cards": {
+        "card": {
             "type": "relation",
-            "relation": "oneToMany",
+            "relation": "manyToOne",
             "target": "api::card.card",
-            "mappedBy": "transaction"
+            "inversedBy": "transactions"
         }
     }
 }
